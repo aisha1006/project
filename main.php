@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zhasa </title>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .mySlide {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+
+
+        html,
+        body {
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        #main {
+            border: none;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        header {
+            position: absolute;
+            height: 600px;
+            background: transparent;
+            background-size: 100%;
+            z-index: 999;
+            padding: 15px 0;
+            width: 100%;
+
+        }
+
+        .container {
+            position: relative;
+            z-index: 5;
+
+        }
+
+
+        #main-nav {
+            margin-top: 15px;
+            height: 30px;
+            font-size: 20px;
+            display: inline-block;
+            text-align: right;
+            float: right;
+            margin-right: 5%;
+        }
+
+        @media screen and (max-width: 768px) {
+            #header #main-nav {
+                display: none;
+            }
+        }
+
+        #main-nav ul li a:hover {
+
+            text-decoration: none;
+            color: #f9ad81;
+        }
+
+        .iconify[data-icon="ant-design:shopping-outline"] :hover {
+            color: #f9ad81;
+        }
+
+        #main-nav ul {
+            padding: 0;
+            margin: 9px 0 0 0;
+        }
+
+        #main-nav ul li {
+            padding: 0;
+            margin: 0;
+            display: inline;
+        }
+
+        #main-nav ul li a {
+            font-family: "Roboto Slab", sans-serif;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-left: 20px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .slideshow-container {
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            margin: 0;
+        }
+
+        #logo {
+            margin-left: 20px;
+            float: left;
+            line-height: 1.2;
+            position: relative;
+        }
+
+        #main h1 {
+            font-family: "Roboto Slab", sans-serif;
+            font-size: 50px;
+            font-weight: 400;
+            color: #fff;
+            display: inline-block;
+            border: 5px solid #fff;
+            padding: 30px 50px;
+            margin-top: -129px;
+            text-align: center;
+
+        }
+
+        .animate-box {
+            top: 50%;
+            margin-top: 100px;
+            padding: 40px;
+            position: absolute;
+            z-index: 3;
+            margin: 0px;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .6
+            }
+
+            to {
+                opacity: .8
+            }
+        }
+
+        .arrow {
+            margin-top: 50px;
+
+        }
+
+        .animate-box img {
+            display: flex;
+            align-items: center;
+            justify-content: center z-index: 99;
+            margin-top: 10px;
+            width: 80px;
+            margin-left: 90px;
+
+
+        }
+
+        .section-title {
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #41454f;
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            opacity: .4;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        .lead {
+            font-size: 39px;
+            font-family: "Roboto Slab", sans-serif;
+            color: #000;
+            text-align: center;
+            margin: 20px;
+            display: inline-block;
+            width: 70%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .lead {
+                font-size: 20px;
+            }
+        }
+
+
+        #categories {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 80px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .img-grid {
+                margin-bottom: 15px;
+            }
+        }
+
+        .img-grid {
+            float: left;
+            margin-left: 14%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto Slab", sans-serif;
+            color: #000;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        footer {
+            background: #41454f;
+            padding: 40px;
+            font-size: 16px;
+            width: 100%;
+            height: 100px;
+
+        }
+
+        footer p {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        footer .footer-widget {
+            margin-bottom: 30px;
+            float: left;
+            width: 100%;
+        }
+
+        .socials {
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-right: 70px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .socials {
+                float: none !important;
+            }
+        }
+
+        .socials li {
+            padding: 0;
+            margin: 0;
+            display: inline;
+        }
+
+        @media screen and (max-width: 768px) {
+            .social li a {
+                margin-right: 10px;
+            }
+        }
+
+        .socials img {
+            top: 4px;
+            width: 26px;
+            margin: 5px;
+            padding: 0px;
+        }
+
+        .follow {
+            display: block;
+            height: 600px;
+            background-color: #41454f;
+
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .follow h7 {
+
+            margin-left: 100px;
+            text-align: center;
+            font-size: 90px;
+            font-family: "Roboto Slab",
+                sans-serif;
+            color: rgba(255, 255, 255, 0.8);
+
+        }
+
+        .follow button {
+            margin-top: 40px;
+            font-size: 60px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            padding: 15px;
+        }
+
+        .follow img {
+
+            min-height: 10em;
+            display: table-cell;
+
+            float: right;
+            height: 550px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="container">
+                <div id="logo"><a href="index.html"><img alt="logo" src="images/logo.png" height=65><span>.</span></a></div>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="main.html" data-nav-section="home">Home</a></li>
+                        <li><a href="photo.html" data-nav-section="photo">Photo</a></li>
+                        <li><a href="video.html" data-nav-section="video">Video</a></li>
+                        <li><a href="design.html" data-nav-section="design">Design</a></li>
+                        <li><a href="about.html" data-nav-section="about">Contact</a></li>
+                        <li><a href="basket.hyml" class="iconify" data-icon="ant-design:shopping-outline" style="color: rgba(255, 255, 255, 0.8); font-size:30px; margin-left:23px;"></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="head">
+
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <div class="slideshow-container">
+            <div class="mySlide fade">
+                <img alt='slides' src="images/slide_6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlide fade">
+                <img alt="slides" src="images/slide-4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlide fade">
+                <img alt="slides" src="images/slide-5.jpg" style="width:100%">
+            </div>
+
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="animate-box">
+            <h1>Zhasa</h1>
+            <img alt="arrow" class="arrow" src="images/arrow-down-navigatio.gif">
+        </div>
+
+
+    </div>
+    <section>
+        <h2 class="section-title">About us</h2>
+        <p class="lead">ZHASA CREATIVE STUDIO creates captivating custom websites, graphic design, and innovative branding development. All websites are interactive, responsive, user friendly, and come with a mobile version. We offer creative marketing tools such as: Logos, Flyers, Social Media graphics and ads, Facebook Integration (sell on FB), Pinterest Integration, and newsletter/email marketing.
+
+            Make your business stand out. Promote your brand with professional photography. We offer in-studio, or on-location photo shoots, and editing. </p>
+        <div id="categories">
+            <div class="img-grid">
+                <a href="photo.html" class="transition">
+                    <img src="images/Vector-1.png" alt="Photo" class="img-categories" width="200" height="180">
+                    <h2 class="title">Photo</h2>
+                </a>
+            </div>
+            <div class="img-grid">
+                <a href="video.html" class="transition">
+                    <img src="images/Vector-2.png" alt="Video" class="img-categories" width="200" height="180">
+                    <h2 class="title">Video</h2>
+                </a>
+            </div>
+            <div class="img-grid">
+                <a href="desgin.html" class="transition">
+                    <img src="images/Vector.png" alt="Design" class="img-categories" width="200" height="180">
+                    <h2 class="title">Design</h2>
+                </a>
+            </div>
+        </div>
+
+        ()
+
+        <div class="follow">
+            <img alt="mock" src="images/Animated_Mockup.gif">
+            <h7>Follow Us on Instagram</h7>
+            <button>@zhasa_club</button>
+        </div>
+
+
+        <?php
+$database = new mysqli('localhost', 'root', '', 'zhasa');
+    if ($result = mysqli_query($database, "SELECT * FROM reviews")) {
+        if (mysqli_num_rows($result)) {
+            echo '<div class="reviews">';
+            while ($row = mysqli_fetch_array($result)) {
+                echo '<div class="card">
+                            <div class="name">' . $row['name'] . ' ' .'</div>
+                            <div class="email"> ' . $row['email'] . '$</div>
+                            <div class="rev-text"> ' . $row['review'] . ' </div>
+                    </div>';
+            }
+            echo '</div>';
+        }
+    }
+    $database->close();
+    ?>
+
+    </section>
+    <footer>
+        <div class="footer-cont">
+            <p>Zhasa community. All Rights Reserved.</p>
+            <p>Designed by Aisha Askarpva </p>
+            <p>zhasa@email.com</p>
+            <p>Whats-up: 87777554635</p>
+            <ul class="socials">
+                <li>
+                    <a href="#"><img src="images/Vectorsocial-1.png"> </a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/Vectorsocial-2.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/Vectorsocial-3.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/Vectorsocial.png"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlide");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 6000); // Change image every 2 seconds
+        }
+
+    </script>
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+</body>
+
+</html>

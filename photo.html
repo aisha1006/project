@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Zhasa </title>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,300,700' rel='stylesheet' type='text/css'>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .mySlide {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+
+
+        #slideshow {
+            width: 100%;
+            height: 600px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 10000px;
+            position: relative;
+            animation: slide 8s ease-in-out infinite;
+        }
+
+        .container section {
+            width: 1000px;
+            height: 600px;
+            float: left;
+        }
+
+        .container section:nth-child(1) {
+            background-image: url(https://images.unsplash.com/photo-1573867368999-5388ba407550?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+        }
+
+        .container section:nth-child(2) {
+            background-image: url(https://images.unsplash.com/photo-1574270981993-f1df213562b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)
+        }
+
+        .container section:nth-child(3) {
+            background-image: url(https://images.unsplash.com/photo-1575015642299-5b92fcbd0ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+        }
+
+        .container section:nth-child(4) {
+            background-image: url(https://images.unsplash.com/photo-1574270981993-f1df213562b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+        }
+
+        .container:hover {
+            animation-play-state: paused;
+        }
+
+
+
+        @keyframes slide {
+            0% {
+                left: 0;
+            }
+
+            25% {
+                left: -300px;
+            }
+
+            50% {
+                left: -1600px;
+            }
+
+            75% {
+                left: -1900px;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        html,
+        body {
+            padding: 0px;
+            margin: 0px;
+
+        }
+
+        #main {
+            border: none;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 0;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        header {
+            position: absolute;
+            height: 600px;
+            background: transparent;
+            background-size: 100%;
+            z-index: 999;
+            padding: 15px 0;
+            width: 100%;
+
+        }
+
+        .container {
+            position: relative;
+            z-index: 5;
+
+        }
+
+
+        #main-nav {
+            margin-top: 15px;
+            height: 30px;
+            font-size: 20px;
+            display: inline-block;
+            text-align: right;
+            float: right;
+            margin-right: 5%;
+        }
+
+        @media screen and (max-width: 768px) {
+            #header #main-nav {
+                display: none;
+            }
+        }
+
+        #main-nav ul li a:hover {
+
+            text-decoration: none;
+            color: #f9ad81;
+        }
+
+        .iconify[data-icon="ant-design:shopping-outline"] :hover {
+            color: #f9ad81;
+        }
+
+        #main-nav ul {
+            padding: 0;
+            margin: 9px 0 0 0;
+        }
+
+        #main-nav ul li {
+            padding: 0;
+            margin: 0;
+            display: inline;
+        }
+
+        #main-nav ul li a {
+            font-family: "Roboto Slab", sans-serif;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-left: 20px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .slideshow-container {
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            margin: 0;
+        }
+
+        #logo {
+            margin-left: 20px;
+            float: left;
+            line-height: 1.2;
+            position: relative;
+        }
+
+        #main h1 {
+            font-family: "Roboto Slab", sans-serif;
+            font-size: 50px;
+            font-weight: 400;
+            color: #fff;
+            display: inline-block;
+            border: 5px solid #fff;
+            padding: 30px 50px;
+            margin-top: -129px;
+            text-align: center;
+
+        }
+
+        .animate-box {
+            top: 50%;
+            margin-top: 100px;
+            padding: 40px;
+            position: absolute;
+            z-index: 3;
+            margin: 0px;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .6
+            }
+
+            to {
+                opacity: .8
+            }
+        }
+
+        .arrow {
+            margin-top: 50px;
+
+        }
+
+        .animate-box img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99;
+            margin-top: 10px;
+            width: 80px;
+            margin-left: 90px;
+
+
+        }
+
+        .section-title {
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #41454f;
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            opacity: .4;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        .lead {
+            font-size: 39px;
+            font-family: "Roboto Slab", sans-serif;
+            color: #000;
+            text-align: center;
+            margin: 20px;
+            display: inline-block;
+            width: 70%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .lead {
+                font-size: 20px;
+            }
+        }
+
+
+        #categories {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 80px;
+        }
+
+        @media screen and (max-width: 480px) {
+            .img-grid {
+                margin-bottom: 15px;
+            }
+        }
+
+        .img-grid {
+            float: left;
+            margin-left: 14%;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Roboto Slab", sans-serif;
+            color: #000;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        footer {
+            background: #41454f;
+            padding: 40px;
+            font-size: 16px;
+            width: 100%;
+            height: 100px;
+
+        }
+
+        footer p {
+            margin: 10px;
+            display: inline-block;
+        }
+
+        footer .footer-widget {
+            margin-bottom: 30px;
+            float: left;
+            width: 100%;
+        }
+
+        .socials {
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-right: 70px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .socials {
+                float: none !important;
+            }
+        }
+
+        .socials li {
+            padding: 0;
+            margin: 0;
+            display: inline;
+        }
+
+        @media screen and (max-width: 768px) {
+            .social li a {
+                margin-right: 10px;
+            }
+        }
+
+        .socials img {
+            top: 4px;
+            width: 26px;
+            margin: 5px;
+            padding: 0px;
+        }
+
+        .follow {
+            display: block;
+            height: 600px;
+            background-color: #41454f;
+
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .follow h7 {
+
+            margin-left: 100px;
+            text-align: center;
+            font-size: 90px;
+            font-family: "Roboto Slab",
+                sans-serif;
+            color: rgba(255, 255, 255, 0.8);
+
+        }
+
+        .follow button {
+            margin-top: 40px;
+            font-size: 60px;
+            background-color: black;
+            color: #fff;
+            border: none;
+            padding: 15px;
+        }
+
+        .follow img {
+
+            min-height: 10em;
+            display: table-cell;
+
+            float: right;
+            height: 550px;
+        }
+
+
+
+        .prev-next {
+            width: 100%;
+            max-width: 1170px;
+            margin: 0 auto;
+            padding-top: 100px;
+        }
+
+        .prev-next a {
+            color: black;
+            font-weight: 500;
+            padding-bottom: 15px;
+        }
+
+        .prev-next a:hover {
+            border-bottom: 1px solid black;
+        }
+
+        .prev-button {
+            width: 50%;
+            position: relative;
+            float: left;
+            text-align: left;
+        }
+
+        .next-button {
+            width: 50%;
+            position: relative;
+            float: left;
+            text-align: right;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr ;
+            grid-template-columns: 1fr 1fr ;
+            grid-gap: 2vw;
+            width: 70%;
+            height: 1000px;
+            position: relative;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+
+        #portfolio-sidebar {
+            width: 900px !important;
+            padding-right: 390px;
+
+        }
+
+        li.grid-item {
+            width: 360px;
+            position: relative;
+
+            padding: 15px;
+        }
+
+        .grid-hover {
+            position: absolute;
+            width: 360px;
+            height: 100%;
+            top: 0;
+            background: white;
+            z-index: 2;
+            opacity: 0;
+            -webkit-transition: all 0.2s ease-in;
+            -moz-transition: all 0.2s ease-in;
+            -ms-transition: all 0.2s ease-in;
+            -o-transition: all 0.2s ease-in;
+            transition: all 0.2s ease-in;
+        }
+
+        .grid-hover:hover {
+            opacity: 0.9;
+        }
+
+        .grid-hover h1 {
+            font-size: 23px;
+            bottom: 80px;
+            left: 40px;
+            position: absolute;
+            text-transform: uppercase;
+            color: #000000;
+            letter-spacing: 1px;
+            font-weight: 900;
+            line-height: 50px;
+        }
+
+        .grid-hover p {
+            font-size: 13px;
+            bottom: 40px;
+            left: 40px;
+            position: absolute;
+            color: #686868;
+            letter-spacing: 1px;
+            font-weight: 400;
+            line-height: 50px;
+        }
+
+        li.grid-item img {
+            width: 360px;
+        }
+
+        .photos {
+            width: 100%;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="header">
+            <div class="container_head">
+                <div id="logo"><a href="index.html"><img alt="logo" src="images/logo.png" height=65><span>.</span></a></div>
+                <nav id="main-nav">
+                    <ul>
+                        <li><a href="main.html" data-nav-section="home">Home</a></li>
+                        <li><a href="photo.html" data-nav-section="photo">Photo</a></li>
+                        <li><a href="video.html" data-nav-section="video">Video</a></li>
+                        <li><a href="design.html" data-nav-section="design">Design</a></li>
+                        <li><a href="about.html" data-nav-section="about">Contact</a></li>
+                        <li><a href="basket.hyml" class="iconify" data-icon="ant-design:shopping-outline" style="color: rgba(255, 255, 255, 0.8); font-size:30px; margin-left:23px;"></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="head">
+
+            </div>
+        </div>
+    </header>
+    <div id="main">
+        <div class="slideshow-container">
+            <div class="mySlide fade">
+                <img alt='slides' src="images/slide_6.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlide fade">
+                <img alt="slides" src="images/slide-4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlide fade">
+                <img alt="slides" src="images/slide-5.jpg" style="width:100%">
+            </div>
+
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div class="animate-box">
+            <h1>Photo</h1>
+            <img alt="arrow" class="arrow" src="images/arrow-down-navigatio.gif">
+        </div>
+
+
+    </div>
+    <section>
+        <h2 class="section-title">Photo</h2>
+        <p class="lead">Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn’t really do it, they just saw something. It seemed obvious to them after a while.</p>
+
+
+        <div id="slideshow">
+            <div class="container">
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+                <section></section>
+            </div>
+        </div>
+        <div class="photos">
+            <ul class="portfolio-grid" id="portfolio-sidebar">
+
+
+                <li class="grid-item">
+                    <img src="images/portfolio/1.jpg">
+                    <a class="ajax-link" href="single.html">
+                        <div class="grid-hover">
+                            <h1>SDU fest</h1>
+                            <p>SDU</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="grid-item">
+                    <img src="images/portfolio/1.jpg">
+                    <a class="ajax-link" href="single-fullscreen.html">
+                        <div class="grid-hover">
+                            <h1>Welcome party</h1>
+                            <p>SDU</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="grid-item">
+                    <img src="images/portfolio/1.jpg">
+                    <a class="ajax-link" href="#">
+                        <div class="grid-hover">
+                            <h1>Opening Cofelike</h1>
+                            <p>Cofelike</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="grid-item">
+                    <img src="images/portfolio/1.jpg">
+                    <a class="ajax-link" href="#">
+                        <div class="grid-hover">
+                            <h1>Weeding</h1>
+                            <p>Aisha and scholarship</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="grid-item">
+                    <img src="images/portfolio/1.jpg">
+                    <a class="ajax-link" href="#">
+                        <div class="grid-hover">
+                            <h1>Party</h1>
+                            <p>Stepuha </p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="grid-item">
+                    <img src="images/portfolio/6.jpg">
+                    <a class="ajax-link" href="#">
+                        <div class="grid-hover">
+                            <h1>Single</h1>
+                            <p>Branding</p>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="reviews">
+            <img src="images/rev.png" width="100%">
+        </div>
+    </section>
+    <footer>
+        <div class="footer-cont">
+            <p>Zhasa community. All Rights Reserved.</p>
+            <p>Designed by Aisha Askarpva </p>
+            <p>zhasa@email.com</p>
+            <p>Whats-up: 87777554635</p>
+            <ul class="socials">
+                <li>
+                    <a href="#"><img src="images/Vectorsocial-1.png"> </a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/Vectorsocial-2.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/Vectorsocial-3.png"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="images/Vectorsocial.png"></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlide");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 6000); // Change image every 2 seconds
+        }
+
+    </script>
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+</body>
+
+</html>
